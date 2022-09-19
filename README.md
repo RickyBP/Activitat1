@@ -6,7 +6,9 @@
 
 *University*: University of Lleida - Campus Igualada - Escola Politècnica Superior
 
-*Estudiants*: 
+*Estudiants*: Paula Silland
+              Joan Bonell
+              Ricard Bosch
 
 ## Part teòrica
 
