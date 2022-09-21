@@ -32,15 +32,12 @@ computerhoy.com
 Cerca les diferències entre les particions **GTP** i **MRB**. *Feu una taula comparativa*.
 
 ### Resposta
-|---------------------------------------------------------------------|
 
 | MBR |	Max 2TB	  | 4 particions primaries	 | Per a la majoria de SO |
 
-|---------------------------------------------------------------------|
 
 | GPT |	Max 256TB |	128 particions primaries | Només en SO de 64 bits |
 
-|---------------------------------------------------------------------|
 
 profesionalview.com
 
@@ -48,7 +45,15 @@ profesionalview.com
 Cerqueu informació sobre el procediment de **Fingerprint** del protocol SSH. Per a què serveix i quins problemes intenta solucionar.
 
 ### Resposta
-xxxxx
+
+És una advertència i serveix per evitar que ens connectem a un servidor SSH maliciós.
+
+Problemes que intenta solucionar:
+
+- Si el fingerprint del servidor SSH al que ens volem connectar està emmagatzemat en ~/.ssh/known_hosts, vol dir que no és la primera vegada que ens connectem al servidor, i en principi vol dir que és un servidor conegut i que ens podem connectar sense problemes.
+- Si el fingerprint no apareix al ~/.ssh/known_hosts, apareix el missatge d'adevertencia i aquí hem de tindre cura i procedir de la manera següent:
+  - Si no és el primer cop que ens connectem al servidor i ens apareix el missatge, hem d'avortar la connexió. Comprovarem que l'administrador no hagi creat un parell de claus. Si és així ens podem connectar sense dubtes. En canvi, si l'administrador no ha modificat les claus, podem estar rebent un atac 'man in the middle', i que el servidor on ens connectem sigui maliciós i ens vol robar les credencials i suplantar-nos la identitat.
+  - Si apareix el missatge i és el primer cop que ens connectem, no ens hem d'amoïnar i tan sols hem de comprovar que el fingerprint de l'advertència correspongui amb el fingerprint del servidor SSH.
 
 ## Part pràctica: Instal·lar un paquet 
 
