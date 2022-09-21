@@ -16,13 +16,25 @@
 Cerca la diferència entre Virtualització i Emulació. *Doneu exemples i casos d'ús on es puguin fer servir*.
 
 ### Resposta
-xxxxx
+La diferència es que amb la Virtualització pots tindre més rendiment que amb la Emulació i que la sensació sigui més fluida.
+
+Exemples d'Emulació:
+  - Els emuladors de consoles, com N64 o PS1.
+
+Exemples de Virtualització:
+  - VirtualBox i poder crear máquines virtuals.
+
+tremplin-numerique.org
+
+computerhoy.com
 
 ### Enunciat
 Cerca les diferències entre les particions **GTP** i **MRB**. *Feu una taula comparativa*.
 
 ### Resposta
-xxxxx
+
+
+profesionalview.com
 
 ### Enunciat
 Cerqueu informació sobre el procediment de **Fingerprint** del protocol SSH. Per a què serveix i quins problemes intenta solucionar.
