@@ -32,7 +32,15 @@ computerhoy.com
 Cerca les diferències entre les particions **GTP** i **MRB**. *Feu una taula comparativa*.
 
 ### Resposta
+|---------------------------------------------------------------------|
 
+| MBR |	Max 2TB	  | 4 particions primaries	 | Per a la majoria de SO |
+
+|---------------------------------------------------------------------|
+
+| GPT |	Max 256TB |	128 particions primaries | Només en SO de 64 bits |
+
+|---------------------------------------------------------------------|
 
 profesionalview.com
 
