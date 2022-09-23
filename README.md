@@ -115,7 +115,16 @@ Com us he explicat a classe els sistemes UNIX sofreixen d'un problema amb les da
 La vostra tasca és obtenir una prova del delicte en el vostre sistema **bsdlad**. Heu de demostrar si aquest afer existeix o no en la vostra instal·lació actual. Heu d'indicar els passos a realitzar per demostrar-ho.
 
 ### Resposta
-xxxxx
+El problema diu que el (03:14:07 UTC el 19 de gener de 2038) és l'últim dia que pot comptar. Llavors si arriba aquesta data, seria (20:45:52 UTC el 13 de desembre de 1901).
+
+A UNIX podem comprovar amb la comanda 'date -d "..." quin dia serà en el futur o quin dia va ser en el passat, per exemple si introduïm 'date -d "+5 days" Wed Sep 28 02:55:47 UTC 2022' ens diu quin dia serà d'aquí 5 dies.
+Nosaltres hem comprovat si el nostre sistema passa del 19 de gener de 2038, comptan 16 anys, que serà tal dia com avui 23 de setembre.
+
+localhost# date -d "16 years"
+Thu Sep 23 02:59:07 UTC 2038
+
+I com podem demostrar, aquest problema no existeix al nostre sistema.
+
 
 ## Part pràctica: Shell 
 
