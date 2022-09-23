@@ -97,7 +97,7 @@ drwxr-xr-x  2 jordi  users   512 Sep  9 15:54 .ssh
 ```
 
 ### Resposta
-xxxxx
+alias la = " ls - la "
 
 ## Part pràctica: Problema de l'any 2038 
 
