@@ -67,8 +67,11 @@ La vostra tasca és investigar el seu funcionament a NetBSD i indicar els passos
 Primer de tot em buscat la manera d'instal·lar el repositori PKGSRC, que la maateixa pagina de NetBSD trobes una guia. Per poder instal·lar-lo ens em hagut de fer SUPERUSER.
 
 Introduint les següents comandes instales el PKGSRC:
+
 '# PKG_PATH="http://cdn.NetBSD.org/pub/pkgsrc/packages/NetBSD/$(uname -p)/$(uname -r|cut -f '1 2' -d.)/All/"'
+
 '# export PKG_PATH'
+
 '# pkg_add pkgin'
 
 A continuació introduïnt la comanda '# pkgin install zsh nginx-1.19.6 vim' intal·les VIM a NetBSD i amb la comanda '# pkgin upgrade' mantens el repositori de PKG actualitzat.
