@@ -37,20 +37,21 @@ Cerca les diferències entre les particions **GTP** i **MRB**. *Feu una taula co
 
 ### Resposta
 
-MBR | Mida Max  de particions i disc dur: 2TB	  | 4 particions primaries	 | sector de dades sense seguretat |Nom de la partició : emmagatzemat a la partició | Per a la majoria de SO |
+MBR | Mida Max  de particions i disc dur: 2TB	  | 4 particions primaries	 | Sector de dades sense seguretat |Nom de la partició : emmagatzemat a la partició | Per a la majoria de SO |
 
 
 GPT |	Mida Max de particions i disc dur: 256TB |	il.limitades( fins a 128 particions primaries amb Windows) | Sector de dades amb sistema de comprovació CRC 32 i copia de seguretat GUID | Nom de la partició: identificador únic GUID més un nom de caràcters(36) | UEFI (fa que la BIOS pugui detectar els dispositius i les partcions | Només en SO de 64 bits |
 
-S'ha buscat informació en la següent pàgina:
+S'ha buscat informació en la següents pàgines:
   - profesionalreview.com
+  - islabit.com
 
 ### Enunciat
 Cerqueu informació sobre el procediment de **Fingerprint** del protocol SSH. Per a què serveix i quins problemes intenta solucionar.
 
 ### Resposta
 
-És una advertència i serveix per evitar que ens connectem a un servidor SSH maliciós.
+És una advertència i la seva funció principal és identificar de manera inequívoca un servidor(per evitar que ens connectem a un servidor SSH maliciós).
 
 Problemes que intenta solucionar:
 
@@ -58,6 +59,9 @@ Problemes que intenta solucionar:
 - Si el fingerprint no apareix al ~/.ssh/known_hosts, apareix el missatge d'adevertencia i aquí hem de tindre cura i procedir de la manera següent:
   - Si no és el primer cop que ens connectem al servidor i ens apareix el missatge, hem d'avortar la connexió. Comprovarem que l'administrador no hagi creat un parell de claus. Si és així ens podem connectar sense dubtes. En canvi, si l'administrador no ha modificat les claus, podem estar rebent un atac 'man in the middle', i que el servidor on ens connectem sigui maliciós i ens vol robar les credencials i suplantar-nos la identitat.
   - Si apareix el missatge i és el primer cop que ens connectem, no ens hem d'amoïnar i tan sols hem de comprovar que el fingerprint de l'advertència correspongui amb el fingerprint del servidor SSH.
+  
+  S'ha buscat informació_
+   - geekland.eu
 
 ## Part pràctica: Instal·lar un paquet 
 
@@ -68,9 +72,9 @@ La vostra tasca és investigar el seu funcionament a NetBSD i indicar els passos
 
 ### Resposta
 
-Primer de tot em buscat la manera d'instal·lar el repositori PKGSRC, que la mateixa pagina de NetBSD trobes una guia. Per poder instal·lar-lo ens em hagut de fer SUPERUSER.
+Amb pkgsrc podem afegir, eliminar i gestionar fàcilment el programari del nostre sistema. Pkgsrc és bàsicament un conjunt de fitxers, agrupats per categories, que contenen informació per instal·lar el programari que hem seleccionat. Primer de tot hem buscat la manera d'instal·lar el repositori PKGSRC, que la mateixa pagina de NetBSD trobes una guia. Per poder instal·lar-lo ens em hagut de fer SUPERUSER.
 
-Introduint les següents comandes instales el PKGSRC:
+Comprovarem que estem connectats al directori root i a continuació amb les següents comandes instalarem el PKGSRC:
 
 '# PKG_PATH="http://cdn.NetBSD.org/pub/pkgsrc/packages/NetBSD/$(uname -p)/$(uname -r|cut -f '1 2' -d.)/All/"'
 
