@@ -16,30 +16,34 @@
 Cerca la diferència entre Virtualització i Emulació. *Doneu exemples i casos d'ús on es puguin fer servir*.
 
 ### Resposta
-La diferència es que amb la Virtualització pots tindre més rendiment que amb la Emulació i que la sensació sigui més fluida.
+La principal diferència consisteix en que la Virtualització ens permet crear més d'un sistema opeatiu (virtual) dins d'un altre, per l'altre banda l'emulació permet que el sistema operatiu principal es comporti com un altre sistema. D'aquesta manera amb la Virtualització pots tindre més rendiment que amb la Emulació i que la sensació sigui més fluida.
 
 Exemples d'Emulació:
   - Els emuladors de consoles, com N64 o PS1.
+  Per exemple si volem un joc de Nintendo DS, ens podem descarregar l'emulador pel nostre mòbil.
 
 Exemples de Virtualització:
-  - VirtualBox i poder crear máquines virtuals.
+  - Programa VirtualBox 
+  Un cas d'ús per exemple, es tenir un Mac i voler fer servir el sistema operatiu Linux, ho podrem fer amb la màquina virtual.
 
-tremplin-numerique.org
-
-computerhoy.com
+S'ha buscat informació a les següents pàgines:
+  - tremplin-numerique.org
+  - computerhoy.com
+  - estudiometadatos.es
+  - executrain.com.mx
 
 ### Enunciat
 Cerca les diferències entre les particions **GTP** i **MRB**. *Feu una taula comparativa*.
 
 ### Resposta
 
-| MBR |	Max 2TB	  | 4 particions primaries	 | Per a la majoria de SO |
+MBR | Mida Max  de particions i disc dur: 2TB	  | 4 particions primaries	 | sector de dades sense seguretat |Nom de la partició : emmagatzemat a la partició | Per a la majoria de SO |
 
 
-| GPT |	Max 256TB |	128 particions primaries | Només en SO de 64 bits |
+GPT |	Mida Max de particions i disc dur: 256TB |	il.limitades( fins a 128 particions primaries amb Windows) | Sector de dades amb sistema de comprovació CRC 32 i copia de seguretat GUID | Nom de la partició: identificador únic GUID més un nom de caràcters(36) | UEFI (fa que la BIOS pugui detectar els dispositius i les partcions | Només en SO de 64 bits |
 
-
-profesionalview.com
+S'ha buscat informació en la següent pàgina:
+  - profesionalreview.com
 
 ### Enunciat
 Cerqueu informació sobre el procediment de **Fingerprint** del protocol SSH. Per a què serveix i quins problemes intenta solucionar.
@@ -64,7 +68,7 @@ La vostra tasca és investigar el seu funcionament a NetBSD i indicar els passos
 
 ### Resposta
 
-Primer de tot em buscat la manera d'instal·lar el repositori PKGSRC, que la maateixa pagina de NetBSD trobes una guia. Per poder instal·lar-lo ens em hagut de fer SUPERUSER.
+Primer de tot em buscat la manera d'instal·lar el repositori PKGSRC, que la mateixa pagina de NetBSD trobes una guia. Per poder instal·lar-lo ens em hagut de fer SUPERUSER.
 
 Introduint les següents comandes instales el PKGSRC:
 
@@ -105,7 +109,7 @@ drwxr-xr-x  2 jordi  users   512 Sep  9 15:54 .ssh
 ```
 
 ### Resposta
-alias la = " ls - la "
+Es pot fer amb la següent comanda: alias la = " ls - la "
 
 ## Part pràctica: Problema de l'any 2038 
 
