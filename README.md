@@ -164,7 +164,10 @@ template.md:
 ```
 
 ### Resposta
-1. per crear els directoris a *home* primer donem permis al Usuari per crear directoris amb la comanda 'chown -R "usuari" /home'
+1. per crear els directoris a *home* primer donem permis al Usuari per crear directoris amb la comanda 'chown -R *USUARI* /home'
+
 A continuació amb la comanda 'ls -la' comprovem que l'usuari ja es el propietari del home i podrem afegir directoris.
-Amb la comnda 'mkdir' creem els directoris 'week0/teoria/, week0/laboratori/, week0/handson, code/, activities/'.
-I amb la comanda 'touch' creem els archius 'notes.md' dins del directori 'week0' i l'archiu 'README.md' al directori 'activities/'.
+
+Amb la comnda 'mkdir' creem els directoris 'week0/teoria/, week0/laboratori/, week0/handson, code/, activities/', dins del directori 'home/'.
+
+I amb la comanda 'touch' creem els arxius 'notes.md' dins del directori 'week0' i l'arxiu 'README.md' al directori 'activities/'.
