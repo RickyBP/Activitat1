@@ -23,7 +23,7 @@ Exemples d'Emulació:
   Per exemple si volem un joc de Nintendo DS, ens podem descarregar l'emulador pel nostre mòbil.
 
 Exemples de Virtualització:
-  - Programa VirtualBox 
+  - Programa VirtualBox.
   Un cas d'ús per exemple, es tenir un Mac i voler fer servir el sistema operatiu Linux, ho podrem fer amb la màquina virtual.
 
 S'ha buscat informació a les següents pàgines:
@@ -40,7 +40,7 @@ Cerca les diferències entre les particions **GTP** i **MRB**. *Feu una taula co
 MBR | Mida Max  de particions i disc dur: 2TB	  | 4 particions primaries	 | Sector de dades sense seguretat |Nom de la partició : emmagatzemat a la partició | Per a la majoria de SO |
 
 
-GPT |	Mida Max de particions i disc dur: 256TB |	il.limitades( fins a 128 particions primaries amb Windows) | Sector de dades amb sistema de comprovació CRC 32 i copia de seguretat GUID | Nom de la partició: identificador únic GUID més un nom de caràcters(36) | UEFI (fa que la BIOS pugui detectar els dispositius i les partcions | Només en SO de 64 bits |
+GPT |	Mida Max de particions i disc dur: 256TB |	Il.limitades( fins a 128 particions primaries amb Windows) | Sector de dades amb sistema de comprovació CRC 32 i copia de seguretat GUID | Nom de la partició: identificador únic GUID més un nom de caràcters(36) | UEFI (fa que la BIOS pugui detectar els dispositius i les partcions | Només en SO de 64 bits |
 
 S'ha buscat informació en la següents pàgines:
   - profesionalreview.com
