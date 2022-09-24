@@ -42,7 +42,7 @@ MBR | Mida Max  de particions i disc dur: 2TB	  | 4 particions primaries	 | Sect
 
 GPT |	Mida Max de particions i disc dur: 256TB |	Il.limitades( fins a 128 particions primaries amb Windows) | Sector de dades amb sistema de comprovació CRC 32 i copia de seguretat GUID | Nom de la partició: identificador únic GUID més un nom de caràcters(36) | UEFI (fa que la BIOS pugui detectar els dispositius i les partcions | Només en SO de 64 bits |
 
-S'ha buscat informació en la següents pàgines:
+S'ha buscat informació en les següents pàgines:
   - profesionalreview.com
   - islabit.com
 
