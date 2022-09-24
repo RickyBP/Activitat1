@@ -16,7 +16,7 @@
 Cerca la diferència entre Virtualització i Emulació. *Doneu exemples i casos d'ús on es puguin fer servir*.
 
 ### Resposta
-La principal diferència consisteix en que la Virtualització ens permet crear més d'un sistema opeatiu (virtual) dins d'un altre, per l'altre banda l'emulació permet que el sistema operatiu principal es comporti com un altre sistema. D'aquesta manera amb la Virtualització pots tindre més rendiment que amb la Emulació i que la sensació sigui més fluida.
+La principal diferència consisteix en que la Virtualització ens permet crear més d'un sistema operatiu (virtual) dins d'un altre, per l'altre banda l'emulació permet que el sistema operatiu principal es comporti com un altre sistema. D'aquesta manera amb la Virtualització pots tindre més rendiment que amb l' Emulació i que la sensació sigui més fluida.
 
 Exemples d'Emulació:
   - Els emuladors de consoles, com N64 o PS1.
@@ -60,7 +60,7 @@ Problemes que intenta solucionar:
   - Si no és el primer cop que ens connectem al servidor i ens apareix el missatge, hem d'avortar la connexió. Comprovarem que l'administrador no hagi creat un parell de claus. Si és així ens podem connectar sense dubtes. En canvi, si l'administrador no ha modificat les claus, podem estar rebent un atac 'man in the middle', i que el servidor on ens connectem sigui maliciós i ens vol robar les credencials i suplantar-nos la identitat.
   - Si apareix el missatge i és el primer cop que ens connectem, no ens hem d'amoïnar i tan sols hem de comprovar que el fingerprint de l'advertència correspongui amb el fingerprint del servidor SSH.
   
-  S'ha buscat informació_
+  S'ha buscat informació:
    - geekland.eu
 
 ## Part pràctica: Instal·lar un paquet 
@@ -72,9 +72,8 @@ La vostra tasca és investigar el seu funcionament a NetBSD i indicar els passos
 
 ### Resposta
 
-Amb pkgsrc podem afegir, eliminar i gestionar fàcilment el programari del nostre sistema. Pkgsrc és bàsicament un conjunt de fitxers, agrupats per categories, que contenen informació per instal·lar el programari que hem seleccionat. Primer de tot hem buscat la manera d'instal·lar el repositori PKGSRC, que la mateixa pagina de NetBSD trobes una guia. Per poder instal·lar-lo ens em hagut de fer SUPERUSER.
-
-Comprovarem que estem connectats al directori root i a continuació amb les següents comandes instalarem el PKGSRC:
+Amb pkgsrc podem afegir, eliminar i gestionar fàcilment el programari del nostre sistema. Pkgsrc és bàsicament un conjunt de fitxers, agrupats per categories, que contenen informació per instal·lar el programari que hem seleccionat. 
+Primer de tot hem buscat la manera d'instal·lar el repositori PKGSRC, que la mateixa pàgina de NetBSD trobes una guia. Per poder instal·lar-lo comprovarem que estem connectats al directori root i a continuació amb les següents comandes instalarem el PKGSRC:
 
 '# PKG_PATH="http://cdn.NetBSD.org/pub/pkgsrc/packages/NetBSD/$(uname -p)/$(uname -r|cut -f '1 2' -d.)/All/"'
 
