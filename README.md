@@ -171,3 +171,8 @@ A continuació amb la comanda 'ls -la' comprovem que l'usuari ja es el propietar
 Amb la comnda 'mkdir' creem els directoris 'week0/teoria/, week0/laboratori/, week0/handson, code/, activities/', dins del directori 'home/'.
 
 I amb la comanda 'touch' creem els arxius 'notes.md' dins del directori 'week0' i l'arxiu 'README.md' al directori 'activities/'.
+
+2. Després de haber fet la configuració per poder connecar-nos al servidor local SFTP, ens movem per aquest amb les mateixes comandes que utilitzem al servidor remot de la maquina virtual, cd entrar a un directori, ls per veure que hi ha dins del directori, etc. però amb la diferencia que hem de afeigr 'l' davant per poder diferenciar el local del remot. Exemple, per accedir a un directori escriure lcd, per veure que hi ha al direcotir lls, per veure en quin directori ens trobem lpwd...
+Llavors fent servir les comandes per entrar als directoris locals on tenim els arxius, amb la comanda 'put localFile' copiem aquest arxiu al sistema remot.
+Un cop tenim els arxius al sistema remot, amb la comanda 'mv file directori' movem l'arxiu 'file' al directori que hem escollit.
+
