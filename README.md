@@ -181,13 +181,13 @@ Per moure el contingut de l'arxiu template.md a l'arxiu notes.md fem servir la c
 
 4. Per veure les 3 primeres linies de l'arxiu template.md utiltzem la comanda 'head' afegint -3 per veure només les 3 primeres linies:
 
-localhost$ head -3 template.md
+*localhost$ head -3 template.md
 # Week 0
 
-## A
+## A*
 
 I per veure les 2 ultimes linies utilizem la comanda 'tail' afegint un -2:
 
-localhost$ tail -2 template.md
+*localhost$ tail -2 template.md
 
-## C
+## C*
