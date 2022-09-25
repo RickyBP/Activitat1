@@ -125,12 +125,29 @@ La vostra tasca és obtenir una prova del delicte en el vostre sistema **bsdlad*
 El problema diu que el (03:14:07 UTC el 19 de gener de 2038) és l'últim dia que pot comptar. Llavors si arriba aquesta data, seria (20:45:52 UTC el 13 de desembre de 1901).
 
 A UNIX podem comprovar amb la comanda 'date -d "..." quin dia serà en el futur o quin dia va ser en el passat, per exemple si introduïm 'date -d "+5 days" Wed Sep 28 02:55:47 UTC 2022' ens diu quin dia serà d'aquí 5 dies.
-Nosaltres hem comprovat si el nostre sistema passa del 19 de gener de 2038, comptan 16 anys, que serà tal dia com avui 23 de setembre.
+Nosaltres hem comprovat si el nostre sistema passa del 19 de gener de 2038, comptant 16 anys, que serà tal dia com avui 23 de setembre.
 
 localhost# date -d "16 years"
 Thu Sep 23 02:59:07 UTC 2038
 
 I com podem demostrar, aquest problema no existeix al nostre sistema.
+
+Una altre forma de demostrar que aquest problema no existeix en el nostre sistema és la següent:
+Creem un programa en C amb el següent codi:
+#include<stdio.h>
+#include<time.h>
+
+int main(){
+  time_t t;
+  printf("El tamany de l'estructura de dades és de %ld bytes, que son %d bits", sizeof(t), sizeof(t)*8);
+  return 0;
+}
+
+Amb aquest programa, ens mostraria per pantalla el següent:
+
+"El tamany de l'estructura de dades és de 8 bytes, que són 64 bits".
+
+Per tant, el problema de l'any 2038 no existeix en el nostre ordinador, ja que els ordinadors actuals tenen més bits.
 
 
 ## Part pràctica: Shell 
@@ -191,3 +208,16 @@ I per veure les 2 últimes línies utilitzem la comanda 'tail' afegint un -2:
 "localhost$ tail -2 template.md
 
 *## C"
+
+5. Copieu el fitxer */etc/passwd* al vostre directori d'inici. La còpia ha d'incloure: *el nom, la data i l'hora de la darrera modificació*. (**man cp**). Anomeneu el fitxer com *cpasswd*.
+
+
+6. Transformeu el fitxer en un fitxer ocult anomenat **.pass**.
+
+7. Permeteu que **qualsevol usuari del sistema** pugui **llegir, escriure i executar** dins la carpeta *code*.
+
+8. Comprimiu tot el contingut del vostre directori en un **backup.tar.gz2**}.
+
+9. Descarregueu per *sftp* el fitxer *backup.tar.gz2* a la vostra màquina real.
+
+10. Elimineu tots els fitxers del vostre home. Alerta (reviseu **man rm**) no volem eliminar els fitxers ocults com  **.ssh, .cshrc,.login,.logout...***}
