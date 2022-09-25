@@ -219,6 +219,14 @@ Tenim per posar ara primerament cp -R passwd */home/joan
 8. $ tar -cvf /home/backup.tar.gz2 /home/joan
 
 9. Descarregueu per *sftp* el fitxer *backup.tar.gz2* a la vostra màquina real.
+- Primer de tot, haurem d'entrar al nostre servei per sftp, sortint de ssh amb la comanda exit.
+- Ara dins de terminal posarem sftp -oPort=2222 joan@127.0.0.1
+- Ens demanarà la contrassenya, la introduïm.
+- Si volguessim veure tot el que podem fer amb sftp podem posar la comanda help.
+- Per saber en quin directori estem, posarem la comanda pwd.
+- Ara com ja estem a la carpeta on està la carpeta que busquem .tar, el que farem és la comanda: get remoteFile backup.tar.gz2 
+- Ja sens ha descarregat tot el fitxer.
+
 
 10.La comanda que hem d'evitar a tota costa és rm -rf.
 La que farem servir serà rm -i *
