@@ -176,3 +176,18 @@ I amb la comanda 'touch' creem els arxius 'notes.md' dins del directori 'week0' 
 Llavors fent servir les comandes per entrar als directoris locals on tenim els arxius, amb la comanda 'put localFile' copiem aquest arxiu al sistema remot.
 Un cop tenim els arxius al sistema remot, amb la comanda 'mv file directori' movem l'arxiu 'file' al directori que hem escollit.
 
+3. Creem els arxius notes.md(buit) i template.md(escribint el contingut amb VIM) utilitzant la comanda 'touch notes.md'.
+Per moure el contingut de l'arxiu template.md a l'arxiu notes.md fem servir la comanda 'cp template.md notes.md'.
+
+4. Per veure les 3 primeres linies de l'arxiu template.md utiltzem la comanda 'head' afegint -3 per veure només les 3 primeres linies:
+
+localhost$ head -3 template.md
+# Week 0
+
+## A
+
+I per veure les 2 ultimes linies utilizem la comanda 'tail' afegint un -2:
+
+localhost$ tail -2 template.md
+
+## C
