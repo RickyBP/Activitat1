@@ -209,23 +209,17 @@ I per veure les 2 últimes línies utilitzem la comanda 'tail' afegint un -2:
 
 *## C"
 
-5. Copieu el fitxer */etc/passwd* al vostre directori d'inici. La còpia ha d'incloure: *el nom, la data i l'hora de la darrera modificació*. (**man cp**). Anomeneu el fitxer com *cpasswd*.
-
-Fem servir la comanda cp inicialment.
+5. Fem servir la comanda cp inicialment.
 Tenim per posar ara primerament cp -R passwd */home/joan
 
-6. Transformeu el fitxer en un fitxer ocult anomenat **.pass**.
-Farem servir la comanda chflags hidden /.pass i ja no es mostrarà el fitxer.
+6. Farem servir la comanda chflags hidden /.pass i ja no es mostrarà el fitxer.
 
-7. Permeteu que **qualsevol usuari del sistema** pugui **llegir, escriure i executar** dins la carpeta *code*.
-chmod a+rwx */code/
+7. chmod a+rwx */code/ //La a el que fa és dir que tots els usuaris els hi dones el permís.
 
-8. Comprimiu tot el contingut del vostre directori en un **backup.tar.gz2**}.
-$ tar -cvf /home/backup.tar.gz2 /home/joan
+8. $ tar -cvf /home/backup.tar.gz2 /home/joan
 
 9. Descarregueu per *sftp* el fitxer *backup.tar.gz2* a la vostra màquina real.
 
-10. Elimineu tots els fitxers del vostre home. Alerta (reviseu **man rm**) no volem eliminar els fitxers ocults com  **.ssh, .cshrc,.login,.logout...***}
-La comanda que hem d'evitar a tota costa és rm -rf.
+10.La comanda que hem d'evitar a tota costa és rm -rf.
 La que farem servir serà rm -i *
 Aquesta comanda el que farà serà eliminar tots els fitxers preguntant un per un si el volem eliminar. D'aquesta manera el programa evitarà que eliminem alguna cosa sense voler.
