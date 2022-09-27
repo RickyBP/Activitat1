@@ -27,7 +27,7 @@ Exemples de Virtualització:
   Un cas d'ús per exemple, es tenir un Mac i voler fer servir el sistema operatiu Linux, ho podrem fer amb la màquina virtual.
 
 S'ha buscat informació a les següents pàgines:
-  - tremplin-numerique.org
+  - [tremplin-numerique.org](tremplin-numerique.org)
   - computerhoy.com
   - estudiometadatos.es
   - executrain.com.mx
@@ -36,6 +36,11 @@ S'ha buscat informació a les següents pàgines:
 Cerca les diferències entre les particions **GTP** i **MRB**. *Feu una taula comparativa*.
 
 ### Resposta
+
+|                                    |MBR     |GPT     |
+|------------------------------------|--------|--------|
+| Mida Max  de particions i disc dur | 2TB	  | 256TB  |
+
 
 MBR | Mida Max  de particions i disc dur: 2TB	  | 4 particions primaries	 | Sector de dades sense seguretat |Nom de la partició : emmagatzemat a la partició | Per a la majoria de SO |
 
@@ -55,10 +60,10 @@ Cerqueu informació sobre el procediment de **Fingerprint** del protocol SSH. Pe
 
 Problemes que intenta solucionar:
 
-- Si el fingerprint del servidor SSH al que ens volem connectar està emmagatzemat en ~/.ssh/known_hosts, vol dir que no és la primera vegada que ens connectem al servidor, i en principi vol dir que és un servidor conegut i que ens podem connectar sense problemes.
-- Si el fingerprint no apareix al ~/.ssh/known_hosts, apareix el missatge d'adevertencia i aquí hem de tindre cura i procedir de la manera següent:
+- Si el fingerprint del servidor SSH al que ens volem connectar està emmagatzemat en ```~/.ssh/known_hosts```, vol dir que no és la primera vegada que ens connectem al servidor, i en principi vol dir que és un servidor conegut i que ens podem connectar sense problemes.
+- Si el fingerprint no apareix al ```~/.ssh/known_hosts```, apareix el missatge d'adevertencia i aquí hem de tindre cura i procedir de la manera següent:
   - Si no és el primer cop que ens connectem al servidor i ens apareix el missatge, hem d'avortar la connexió. Comprovarem que l'administrador no hagi creat un parell de claus. Si és així ens podem connectar sense dubtes. En canvi, si l'administrador no ha modificat les claus, podem estar rebent un atac 'man in the middle', i que el servidor on ens connectem sigui maliciós i ens vol robar les credencials i suplantar-nos la identitat.
-  - Si apareix el missatge i és el primer cop que ens connectem, no ens hem d'amoïnar i tan sols hem de comprovar que el fingerprint de l'advertència correspongui amb el fingerprint del servidor SSH.
+  - Si apareix el missatge i és el primer cop que ens connectem, no ens hem d'amoïnar i tan sols hem de comprovar que el fingerprint de l'advertència correspongui amb el fingerprint del servidor **SSH**.
   
   S'ha buscat informació:
    - geekland.eu
@@ -75,11 +80,11 @@ La vostra tasca és investigar el seu funcionament a NetBSD i indicar els passos
 Amb pkgsrc podem afegir, eliminar i gestionar fàcilment el programari del nostre sistema. Pkgsrc és bàsicament un conjunt de fitxers, agrupats per categories, que contenen informació per instal·lar el programari que hem seleccionat. 
 Primer de tot hem buscat la manera d'instal·lar el repositori PKGSRC, que la mateixa pàgina de NetBSD trobes una guia. Per poder instal·lar-lo comprovarem que estem connectats al directori root i a continuació amb les següents comandes instalarem el PKGSRC:
 
-'# PKG_PATH="http://cdn.NetBSD.org/pub/pkgsrc/packages/NetBSD/$(uname -p)/$(uname -r|cut -f '1 2' -d.)/All/"'
-
-'# export PKG_PATH'
-
-'# pkg_add pkgin'
+```sh
+PKG_PATH="http://cdn.NetBSD.org/pub/pkgsrc/packages/NetBSD/$(uname -p)/$(uname -r|cut -f '1 2' -d.)/All/"
+export PKG_PATH
+pkg_add pkgin
+```
 
 A continuació introduïnt la comanda '# pkgin install zsh nginx-1.19.6 vim' intal·les VIM a NetBSD i amb la comanda '# pkgin upgrade' mantens el repositori de PKG actualitzat.
 
@@ -134,6 +139,8 @@ I com podem demostrar, aquest problema no existeix al nostre sistema.
 
 Una altre forma de demostrar que aquest problema no existeix en el nostre sistema és la següent:
 Creem un programa en C amb el següent codi:
+
+```c
 #include<stdio.h>
 #include<time.h>
 
@@ -142,6 +149,8 @@ int main(){
   printf("El tamany de l'estructura de dades és de %ld bytes, que son %d bits", sizeof(t), sizeof(t)*8);
   return 0;
 }
+```
+
 
 Amb aquest programa, ens mostraria per pantalla el següent:
 
@@ -185,7 +194,7 @@ template.md:
 
 A continuació amb la comanda 'ls -la' comprovem que l'usuari ja es el propietari del home i podrem afegir directoris.
 
-Amb la comnda 'mkdir' creem els directoris 'week0/teoria/, week0/laboratori/, week0/handson, code/, activities/', dins del directori 'home/'.
+Amb la comnda ```mkdir``` creem els directoris 'week0/teoria/, week0/laboratori/, week0/handson, code/, activities/', dins del directori 'home/'.
 
 I amb la comanda 'touch' creem els arxius 'notes.md' dins del directori 'week0' i l'arxiu 'README.md' al directori 'activities/'.
 
@@ -198,7 +207,8 @@ Per moure el contingut de l'arxiu template.md a l'arxiu notes.md fem servir la c
 
 4. Per veure les 3 primeres línies de l'arxiu template.md utilitzem la comanda 'head' afegint -3 per veure només les 3 primeres línies:
 
-"localhost$ head -3 template.md
+```head -3 template.md```
+
 *# Week 0
 
 *## A"
